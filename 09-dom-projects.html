@@ -32,7 +32,7 @@ function handleCostKeyDown(event){
 
 
         if(cost<40){
-            cost+=10;
+              cost=Math.round((cost+10)*100)/100;
             }
 
             document.querySelector('.js-total-cost').innerHTML=`$${cost}`;
