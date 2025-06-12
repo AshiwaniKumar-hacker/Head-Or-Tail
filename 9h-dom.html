@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+  <input type="text" placeholder="type something" class="js-input-btn" onkeyup="
+    writeSomething();
+    ">
+  <p class="js-paragraph"></p>      
+    </body>
+    <script>
+        function writeSomething(){  
+            const inputElemnt=document.querySelector('.js-input-btn');
+            document.querySelector('.js-paragraph').innerHTML=`${inputElemnt.value}`
+        }
+    </script>
+</html>
