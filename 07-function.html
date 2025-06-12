@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+    //  function function1() {
+    //     console.log('helo');
+    //     console.log(2+2);
+    //  }   
+
+    //  function1(); //calling the function
+    // function calculateTax(parameter1){
+    //     console.log(parameter1*0.1);
+    // }
+    // calculateTax(2000);
+
+    // function greet(name='there'){
+    //     if(!name) {
+    //         console.log(`hi ${name}!`);
+    //     } else{
+    //         console.log(`hi ${name}!`)
+    //     }
+    //     console.log(`Hello ${name}!`);
+    // }
+    // greet('Ashiwani');
+
+    // function convertCelToFah(celsius){
+    //     return console.log((celsius*9/5)+32);
+    // }
+    // convertCelToFah(25);
+
+    // function convertFahToCel(Fahrenheit){
+    //     return console.log((Fahrenheit-32)*5/9);
+    // }
+    // convertFahToCel(86);
+
+    function convertTemp(temp ,unit){
+        if(unit==='F'){
+            const Fahrenhiet=(temp-32)*5/9;
+            console.log(`${temp}C to F is : ${Fahrenhiet}`);
+
+        } else if(unit==='C'){
+            const Celsius=(temp+32)*9/5;
+            console.log(`${temp}F to C is : ${Celsius}`);
+        }
+        
+    }
+    convertTemp(53,'F');
+
+    </script>
+</html>

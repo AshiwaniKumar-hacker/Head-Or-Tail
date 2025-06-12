@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <p class="js-displayCal"></p>
+
+    <p>
+        <button
+        onclick="
+        calculation += '1';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >1</button>
+
+        <button
+        onclick="
+        calculation += '2';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >2</button>
+
+        <button 
+        onclick="
+        calculation += '3';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >3</button>
+
+        <button
+        onclick="
+        calculation += ' + ';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >+</button>
+    </p>
+
+    <p>
+
+        <button
+        onclick="
+        calculation += '4';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >4</button>
+
+        <button
+        onclick="
+        calculation += '5';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >5</button>
+
+        <button 
+        onclick="
+        calculation += '6';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >6</button>
+
+        <button
+        onclick="
+        calculation += ' - ';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >-</button>
+    </p>
+
+    <p>
+
+        <button
+        onclick="
+        calculation += '7';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >7</button>
+
+        <button
+        onclick="
+        calculation += '8';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >8</button>
+
+        <button 
+        onclick="
+        calculation += '9';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >9</button>
+
+        <button
+        onclick="
+        calculation += ' * ';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >*</button>
+    </p>
+    <p>
+
+        <button
+        onclick="
+        calculation += '0';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >0</button>
+
+        <button
+        onclick="
+        calculation += '.';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >.</button>
+
+        <button 
+        onclick="
+        calculation = eval(calculation);
+        console.log(calculation);
+         displayCalculation();
+      "
+        >=</button>
+
+        <button
+        onclick="
+        calculation += ' / ';
+        console.log(calculation);
+         displayCalculation();
+      "
+        >/</button>
+    </p>
+
+    <p>
+       
+        <button 
+        onclick="
+        calculation='';
+        console.log('Cleared');
+         displayCalculation();
+      "
+        >Clear</button> 
+    </p>
+        
+    </body>
+    <script>
+        let calculation='';
+        displayCalculation();
+        function displayCalculation(){
+            document.querySelector('.js-displayCal').innerHTML=`${calculation}`
+        }
+    </script>
+</html>

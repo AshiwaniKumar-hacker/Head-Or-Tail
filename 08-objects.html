@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // const product = {
+        //     name:'socks', 
+        //     price:1090
+        // };
+        // console.log(product);
+        // console.log(product.name); first way to access the object items.
+        // console.log(product.price);
+        // product.name='Mr. Hacker Hacking Tools';
+        // product.song='sanam re';
+        // delete product.song;
+        // console.log(product);
+        // const product={
+        //     name:'shirt',
+        //     ['delivery-time']:'2 days left',
+        //     rating:{
+        //         stars:4.5,
+        //         count:10000
+        //     },
+        //     fun: function fun1(){
+        //         console.log('hi');
+        //     }
+
+        // }
+        // console.log(product['name']); //this is second way to "product.name" to acces the items of the objects.
+        //why use second way to access objects
+        // console.log(product['delivery-time']);
+        //this will show the undefined but if we use "." then it considered dash(-) and subtract sign. So it will show errors
+        // console.log(product.rating);
+        // product.fun();
+
+        //json object
+        //JSON does not support functions
+        //convert javascript object into JSON
+        // console.log(JSON.stringify(product));
+
+        // const jsonString=JSON.stringify(product);
+        // console.log(JSON.parse(jsonString));
+
+        // Auto Boxing
+        // console.log('Ashiwani'.length);
+        // console.log('Ashiwani'.toUpperCase());
+
+        //object are refrences
+    //     const obj1={
+    //         message:'hello'
+    //     };
+    //     const obj2=obj1;
+    //     console.log(obj1);
+    //     console.log(obj2);
+
+
+    //     const obj3={
+    //         message:'hello'
+    //     };
+    //     console.log(obj1===obj3);
+    //     console.log(obj1===obj2);
+
+    //    const obj4={
+    //         message:'hello',
+    //         price:99
+    //     }; 
+       //const message= onj4.message;  Destructuring
+    //    const {message,price}=obj4;
+    //    console.log(message);
+    //    console.log(price);
+        const message="Hello World";
+       const obj5 = {
+        //message:message shorthand property
+        message,
+        // method: function funtion1() {
+        //     console.log('method');
+        // }
+        method(){
+            console.log('method');
+        }
+       };
+     
+       console.log(obj5);
+       obj5.method();
+    </script>
+</html>

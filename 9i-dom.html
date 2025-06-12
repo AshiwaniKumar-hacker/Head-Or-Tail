@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cart quantity</title>
+    </head>
+    <body>
+        <button onclick="
+            // console.log(`Cart Quantity: ${cartQuantity}`);
+            displayCartQauntity();
+            ">Show Quantity</button>
+        <button
+
+        onclick="
+       updateCartQuantity(1);
+        ">Add To Cart</button>
+        
+        <button
+        onclick="
+        updateCartQuantity(2);
+        ">+2</button>
+        
+        <button
+        onclick="
+      updateCartQuantity(3);
+        ">+3</button>
+
+        <button 
+        onclick="
+        cartQuantity=0;
+        console.log('Cart was reset.');
+        // console.log(`Cart Quantity is : ${cartQuantity}`);
+        displayCartQauntity();
+        "
+        >Reset Cart</button>
+        
+        <button onclick="
+        updateCartQuantity(-1);
+        ">Remove From Cart</button>
+
+        <p class="js-Cart-Quantity"></p>
+    </body>
+    <script>
+        
+        let cartQuantity =0;
+        displayCartQauntity();
+       function updateCartQuantity(change){
+        if(cartQuantity+change>10){
+        alert('cart is full');
+        return;
+        }
+         
+        if(cartQuantity+change<0){
+        alert('There is no item in cart. Please add items');
+        return;
+        } 
+        cartQuantity+=change;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+        displayCartQauntity();
+    }
+    function displayCartQauntity(){
+        document.querySelector('.js-Cart-Quantity').innerHTML=`Cart Quantity is ${cartQuantity}`};
+
+    </script>
+</html>
