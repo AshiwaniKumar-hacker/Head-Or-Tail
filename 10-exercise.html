@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10 Exercise</title>
+        <style>
+            .gaming{
+                background-color: black;
+                color: white;
+                height: 40px;
+                width: 100px;
+                border: none;
+                border-radius: 10px;
+                margin-left: 20px;
+                font-weight: bold;
+                font-size: 15px;
+                cursor: pointer;
+            }
+            .gaming2{
+                background-color: white;
+                color:black;
+            }
+        </style>
+    </head>
+    <body>
+      
+       <button class="gaming js-gaming" id="" onclick="gamingfun('.js-gaming')">Gaming</button>
+       <button class="gaming js-gaming1" id="" onclick="gamingfun('.js-gaming1')">Music</button>
+       <button class="gaming js-gaming2" id="" onclick="gamingfun('.js-gaming2')">Tech</button>
+       
+    </body>
+    <script>
+        function gamingfun(selector){
+            const gamingbtn=document.querySelector(selector);
+        if(!gamingbtn.classList.contains('gaming2')){
+            gamingbtn.classList.add('gaming2');
+        } else{
+            gamingbtn.classList.remove('gaming2');
+        }
+        }
+
+    </script>
+</html>
