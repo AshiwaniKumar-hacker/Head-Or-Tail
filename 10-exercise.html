@@ -23,7 +23,7 @@
     </head>
     <body>
       
-       <button class="gaming js-gaming" id="" onclick="gamingfun('.js-gaming')">Gaming</button>
+       <button class="gaming js-gaming" id="" onclick="gamingfun('.js-gaming');">Gaming</button>
        <button class="gaming js-gaming1" id="" onclick="gamingfun('.js-gaming1')">Music</button>
        <button class="gaming js-gaming2" id="" onclick="gamingfun('.js-gaming2')">Tech</button>
        
@@ -32,10 +32,18 @@
         function gamingfun(selector){
             const gamingbtn=document.querySelector(selector);
         if(!gamingbtn.classList.contains('gaming2')){
+            turnoffPreviousBtn();
             gamingbtn.classList.add('gaming2');
         } else{
             gamingbtn.classList.remove('gaming2');
         }
+        }
+
+        function turnoffPreviousBtn(){
+            const previosBtn=document.querySelector('.gaming2');
+            if(previosBtn){
+                previosBtn.classList.remove('gaming2');
+            }
         }
 
     </script>

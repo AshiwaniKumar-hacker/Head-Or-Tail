@@ -2,18 +2,61 @@
 <html>
     <head>
         <title>DOM Projects</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .subscribeBtn {
+                border: none;
+                background-color: black;
+                color: white;
+                height: 42px;
+                width: 120px;
+                border-radius: 21px;
+                font-weight: bolder;
+                font-size: medium;
+                cursor: pointer;
+                margin-bottom: 30px;
+            }
+            .is-subscribed{
+                background-color: rgb(240, 240, 240);
+                color:black;
+            }
+
+            .cost-input{
+                font-size: 15px;
+                padding: 10px;
+            }
+
+            .calculateBtn{
+                background-color: green;
+                color: white;
+                height: 42px;
+                width:100px;
+                border: none;
+                font-size: 15px;
+                font-weight: bold;
+                cursor:pointer;
+            }
+
+
+
+
+        </style>
     </head>
     <body>
        <p>YouTube Subscribe Button</p>
        <button onclick="
        subscribe();
-" class="js-subbtn">Subscribe</button>
+" class="js-subbtn subscribeBtn">Subscribe</button>
 
         <p>Amazon Shipping Calculator</p>
-        <input placeholder="Cost of Order" class="js-cost-input" onkeydown="
+        <p>Order Below 40=10 Shipping Charge</p>
+        <p>Orders over $40=FREE shipping.</p>
+        <input placeholder="Cost of Order" class="js-cost-input cost-input" onkeydown="
        handleCostKeyDown(event);
         ">
-        <button onclick="calculateTotal();"
+        <button onclick="calculateTotal(); " class="calculateBtn"
         >Calculate</button>
         <p class="js-total-cost"></p>
 
@@ -29,7 +72,7 @@ function handleCostKeyDown(event){
         function calculateTotal(){
             const inputElement=document.querySelector('.js-cost-input');
             let cost=Number(inputElement.value);
-
+            
 
         if(cost<40){
               cost=Math.round((cost+10)*100)/100;
@@ -43,8 +86,10 @@ const buttonElement=document.querySelector('.js-subbtn');
 
        if(buttonElement.innerText==='Subscribe'){
         buttonElement.innerText='Subscribed';
+        buttonElement.classList.add('is-subscribed');
        } else {
         buttonElement.innerText='Subscribe';
+        buttonElement.classList.remove('is-subscribed');
        }
         }
            </script>

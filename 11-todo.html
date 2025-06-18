@@ -5,14 +5,14 @@
         <title>To Do List</title>
     </head>
     
-   <body>
-        
+<body>
     <p class="js-display">To Do List</p>
-    <input type="text" placeholder="To Do name" class="js-name-input">
-    <input type="date">
-    <button onclick="addTodo();">Add</button>
-
-    <div class="js-todo-button"></div>
+<div class="todo-input-grid">
+<input type="text" placeholder="To Do name" class="js-name-input name-input">
+<input type="date" class="js-due-date-input dueDate-input">
+<button onclick="addTodo();" class="add-todo">Add</button>
+</div>
+<div class="js-todo-button todo-grid"></div>
     
     
     
@@ -24,10 +24,5 @@
     </body>
 
    
-   
-   
-   
-   
-   
-    <script src="js files/todo.js "></script>
+   <script src="js files/todo.js "></script>
 </html>
