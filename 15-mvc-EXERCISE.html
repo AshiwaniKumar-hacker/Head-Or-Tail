@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day.js Example</title>
+</head>
+<body>
+  <script type="module">
+    import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
+
+    const today=dayjs();
+    const after5Days=today.add(30,'days');
+    console.log(after5Days.format('dddd,MMMM D'));
+    const before30Days=today.subtract(30,'days');
+    console.log(before30Days.format('dddd'));
+
+    const dates={
+        days:
+    }
+
+  </script>
+</body>
+</html>
